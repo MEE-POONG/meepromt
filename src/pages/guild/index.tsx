@@ -5,7 +5,7 @@ import { ExamSlider } from "../../../container/Slider";
 export default function GuildPage() {
     return (
         <Layout>
-            <div className="about-page container mx-auto py-24 font-font01">
+            <section className="container mx-auto py-24 font-font01">
 
                 <h1>Welcome to GuildPage</h1>
 
@@ -20,7 +20,7 @@ export default function GuildPage() {
 
                 </div>
 
-            </div>
+            </section>
         </Layout>
     )
 }

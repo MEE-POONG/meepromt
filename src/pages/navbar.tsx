@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="container flex flex-wrap items-center justify-between mx-auto p-4 font-font01">
       <a href="/." className="flex items-center">
         <img src="./images/new-logo.png" className=" h-14 mr-3" alt="" />
-        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-cyan-600 ">MPT</span> */}
+        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-violet-700 ">MPT</span> */}
       </a>
       <div onClick={handleNav} className=" block md:hidden">
         {!nav ? <RxCross1 size={20} /> : <FiAlignJustify size={20} />}
@@ -23,20 +23,20 @@ export default function Navbar() {
       <div className="hidden w-full md:block md:w-auto" id="navbar">
         <ul className={"font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 "}>
           <li>
-            <a href="./" className="block py-2 pl-3 pr-4 text-gray-500 hover:text-cyan-600 rounded md:p-0 " aria-current="page">หน้าแรก</a>
+            <a href="./" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 " aria-current="page">หน้าแรก</a>
           </li>
 
           <li className="">
             <Menu as="div" className="relative text-left">
               <div onClick={handleNav}>
-                <Menu.Button className="inline-flex rounded-md text-gray-500 hover:text-cyan-600">
+                <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
                   About
                   {!nav ? 
-                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-cyan-600"
+                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
                     aria-hidden="true" /> 
                     : 
                     <AiOutlineUp
-                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-cyan-600"
+                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
                     aria-hidden="true"
                    />}
                   
@@ -109,25 +109,25 @@ export default function Navbar() {
           </li>
 
           <li>
-            <a href="services" className="block py-2 pl-3 pr-4 text-gray-500 hover:text-cyan-600 rounded md:p-0 ">บริการ</a>
+            <a href="services" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">บริการ</a>
           </li>
           <li>
-            <a href="ourwork" className="block py-2 pl-3 pr-4 text-gray-500 hover:text-cyan-600 rounded md:p-0 ">ผลงาน</a>
+            <a href="ourwork" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ผลงาน</a>
           </li>
           <li>
-            <a href="guild" className="block py-2 pl-3 pr-4 text-gray-500 hover:text-cyan-600 rounded md:p-0 ">กิลด์</a>
+            <a href="guild" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">กิลด์</a>
           </li>
           <li>
             <Menu as="div" className="relative inline-block text-left">
             <div onClick={handleNav}>
-                <Menu.Button className="inline-flex rounded-md text-gray-500 hover:text-cyan-600">
+                <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
                   ประชาสัมพันธ์
                   {!nav ? 
-                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-cyan-600"
+                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
                     aria-hidden="true" /> 
                     : 
                     <AiOutlineUp
-                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-cyan-600"
+                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
                     aria-hidden="true"
                    />}
                   
@@ -192,7 +192,7 @@ export default function Navbar() {
             </Menu>
           </li>
           <li>
-            <a href="contact" className="block py-2 pl-3 pr-4 text-gray-500 hover:text-cyan-600 rounded md:p-0 ">ติดต่อ</a>
+            <a href="contact" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ติดต่อ</a>
           </li>
         </ul>
       </div>
