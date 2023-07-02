@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import "home.scss";
 @import "about.scss";
 
@@ -25,5 +28,5 @@ h4 {
 
 body {
     background-color: #ffffff;
-    background-image: conic-gradient(at left bottom, rgb(216, 180, 254), rgb(94, 234, 212), rgb(167, 139, 250))
+    // background-image: conic-gradient(at left bottom, rgb(216, 180, 254), rgb(94, 234, 212), rgb(167, 139, 250))
 }

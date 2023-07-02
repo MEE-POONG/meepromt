@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Layout from './layout'
 import HometIndex from '../../container/Home_index'
 import GuildIndex from '../../container/Guild_index'
-import { CiAlignBottom } from "react-icons/ci";
 
 export default function Home() {
   return (
