@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Layout from './layout'
-import ResponsiveSlide from '../../container/AboutSlider'
+import Layout from '@/components/layout'
+import Responsive from '@/container/AboutSlider'
 
 export default function About() {
   return (

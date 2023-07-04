@@ -1,6 +1,6 @@
 import { FiAperture } from "react-icons/fi";
-import Layout from "../layout";
-import { ExamSlider } from "../../../container/Slider";
+import Layout from "../../../components/layout";
+import { ExamSlider } from "../@/container/Slider";
 
 export default function GuildPage() {
     return (

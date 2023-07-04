@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Layout from '../layout'
+import Layout from '../../../components/layout'
 import Link from 'next/link'
 import WorkTapbar from '../ourwork'
 
