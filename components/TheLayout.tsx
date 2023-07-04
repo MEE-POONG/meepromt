@@ -1,7 +1,7 @@
 // Layout.tsx
 import React, { useState } from 'react';
 import { Inter } from 'next/font/google'
-import TheNavbar from './TheNavbar';
+import TheNavbar from '@/components/TheNavbar';
 import TheFooter from './TheFooter';
 // import TheOffcanvas from './TheOffcanvas';
 const inter = Inter({ subsets: ['latin'] })
