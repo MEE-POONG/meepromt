@@ -6,7 +6,7 @@ import { AiOutlineDown, AiFillHeart, AiOutlineUp } from "react-icons/ai";
 
 const TheNavbar: React.FC = () => {
 
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(true)
 
   const handleNav = () => {
     setNav(!nav)

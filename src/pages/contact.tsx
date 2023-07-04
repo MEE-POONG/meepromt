@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Layout from '@/components/layout'
+import Layout from '@/components/TheLayout'
 import { AiFillAlert } from "react-icons/ai";
 
 export default function Contact() {

@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import Layout from '@/components/layout'
+import TheLayout from '@/components/TheLayout'
 import HometIndex from '@/container/Home_index'
 import GuildIndex from '@/container/Guild_index'
 
 export default function Home() {
   return (
-    <Layout>
+    <TheLayout>
       <div className="container text-cyan-800 mx-auto text-center mt-24 font-font01">
         <div className="flex flex-col justify-center items-center text-center animate-fade-up">
           <img src="images/new-logo.png" className="w-72 " />
@@ -22,6 +22,6 @@ export default function Home() {
           <GuildIndex/>
           
       </div>
-    </Layout>
+    </TheLayout>
   )
 }

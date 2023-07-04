@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Layout from '@/components/layout'
+import Layout from '@/components/TheLayout'
 import React, { useState } from "react";
 import { Tab } from '@headlessui/react'
 
