@@ -32,7 +32,7 @@ import { Tab } from '@headlessui/react'
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
-export default function Example() {
+export default function WorkTapbar() {
   let [categories] = useState({
     WebSite: [
       {
@@ -99,7 +99,7 @@ export default function Example() {
   return (
     <Layout>
       <div className='container mx-auto p-5 font-font01 mt-10'>
-        <h2 className='text-3xl font-semibold mb-12'>ผลงานของเรา</h2>
+        <h2 className='text-3xl font-semibold mb-12'>ตัวอย่างเว็บไซต์</h2>
         <div className=" w-full px-2 sm:px-0">
           <Tab.Group>
             <Tab.List className="flex space-x-1 rounded-xl border-b-2 p-1">

@@ -68,7 +68,7 @@ export default function Navbar() {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <a href="personals">
+                        <a href="teams">
                           <button
                             className={`${active ? 'bg-violet-400 text-white' : 'text-gray-900'
                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -108,9 +108,6 @@ export default function Navbar() {
             </Menu>
           </li>
 
-          <li>
-            <a href="services" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">บริการ</a>
-          </li>
           <li>
             <a href="ourwork" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ผลงาน</a>
           </li>
