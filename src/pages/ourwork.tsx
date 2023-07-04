@@ -97,7 +97,7 @@ export default function WorkTapbar() {
   })
 
   return (
-    <Layout>
+   
       <div className='container mx-auto p-5 font-font01 mt-10'>
         <h2 className='text-3xl font-semibold mb-12'>ตัวอย่างเว็บไซต์</h2>
         <div className=" w-full px-2 sm:px-0">
@@ -149,6 +149,5 @@ export default function WorkTapbar() {
         </div>
       </div>
 
-    </Layout>
   )
 }

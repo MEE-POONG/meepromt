@@ -1,105 +1,308 @@
-import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
-import { Disclosure } from "@headlessui/react";
+import { Menu, Transition } from "@headlessui/react";
+import React, { useState, Fragment} from "react";
+import { FiAlignJustify } from "react-icons/fi";
+import { RxCross1 } from "react-icons/rx";
+import { AiOutlineDown, AiFillHeart, AiOutlineUp } from "react-icons/ai";
 
-interface NavigationItem {
-  name: string;
-}
+export default function Navbar() {
+  const [nav, setNav] = useState(false)
 
-const Navbar: React.FC = () => {
-  const navigation: NavigationItem[] = [
-    { name: "Product" },
-    { name: "Features" },
-    { name: "Pricing" },
-    { name: "Company" },
-    { name: "Blog" },
-  ];
+  const handleNav = () => {
+    setNav(!nav)
+  }
 
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
-        {/* <Disclosure> */}
-          {/* {({ open }) => ( */}
-            <>
-              <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-                <Link href="/">
-                  <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-                    <span>
-                      <Image
-                        src="/img/logo.svg"
-                        alt="N"
-                        width={32}
-                        height={32}
-                        className="w-8"
-                      />
-                    </span>
-                    <span>Nextly</span>
-                  </span>
-                </Link>
+    <nav className="container flex flex-wrap items-center justify-between mx-auto p-4 font-font01">
+      <a href="/." className="flex items-center">
+        <img src="./images/new-logo.png" className=" h-14 mr-3" alt="" />
+        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-violet-700 ">MPT</span> */}
+      </a>
+      <div onClick={handleNav} className=" block md:hidden">
+        {!nav ? <RxCross1 size={20} /> : <FiAlignJustify size={20} />}
+      </div>
+      <div className="hidden w-full md:block md:w-auto" id="navbar">
+        <ul className={"font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 "}>
+          <li>
+            <a href="./" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 " aria-current="page">หน้าแรก</a>
+          </li>
 
-                {/* <Disclosure.Button
-                  aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"> */}
-                  <svg
-                    className="w-6 h-6 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24">
-                    {/* {open && ( */}
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                      />
-                    {/* )} */}
-                    {/* {!open && ( */}
-                      <path
-                        fillRule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                      />
-                    {/* )} */}
-                  </svg>
-                {/* </Disclosure.Button> */}
-
-                {/* <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden"> */}
-                  <>
-                    {/* {navigation.map((item, index) => ( */}
-                      {/* <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800">
-                          {item.name}
-                      </Link> */}
-                     {/* ))} */}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
-                        Get Started
-                    </Link>
-                  </>
-                {/* </Disclosure.Panel> */}
+          <li className="">
+            <Menu as="div" className="relative text-left">
+              <div onClick={handleNav}>
+                <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
+                  About
+                  {!nav ? 
+                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
+                    aria-hidden="true" /> 
+                    : 
+                    <AiOutlineUp
+                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
+                    aria-hidden="true"
+                   />}
+                  
+                </Menu.Button>
               </div>
-            </>
-          {/* )} */}
-        {/* </Disclosure> */}
+              <Transition 
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="px-1 py-1 ">
+                    <Menu.Item>
 
-        <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
-                    {menu.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+                      {({ active }) => (
+                        <a href="about">
+                          <button
+                            className={`${active ? 'bg-sky-300 text-white ' : 'text-gray-900'
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                          >
+                            เกี่ยวกับเรา
+                          </button>
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a href="teams">
+                          <button
+                            className={`${active ? 'bg-violet-400 text-white' : 'text-gray-900'
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                          >
+                            Team
+                          </button>
+                        </a>
+                      )}
+                    </Menu.Item>
+                  </div>
+                  {/* <div className="px-1 py-1">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Archive
+                        </button>
+                      )}
+                    </Menu.Item>
 
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-              Get Started
-          </Link>
+                  </div> */}
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          </li>
 
-          <ThemeChanger />
-        </div>
-      </nav>
-    </div>
-  );
+          <li>
+            <a href="ourwork" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ผลงาน</a>
+          </li>
+          <li>
+            <a href="guild" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">กิลด์</a>
+          </li>
+          <li>
+            <Menu as="div" className="relative inline-block text-left">
+            <div onClick={handleNav}>
+                <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
+                  ประชาสัมพันธ์
+                  {!nav ? 
+                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
+                    aria-hidden="true" /> 
+                    : 
+                    <AiOutlineUp
+                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
+                    aria-hidden="true"
+                   />}
+                  
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="px-1 py-1 ">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${active ? 'bg-sky-300 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Edit
+                        </button>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${active ? 'bg-sky-400 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Duplicate
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          </li>
+          <li>
+            <a href="contact" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ติดต่อ</a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Mobile Nav */}
+      <div className={!nav ? 'z-30 fixed left-0 top-0 w-[80%] h-full border-r text-center border-r-gray-800 bg-black opacity-90 text-white ease-in-out duration-300 md:hidden' : 'fixed left-[-100%]'}>
+        <a href="/." className="flex items-center p-5">
+          <img src="images/new-logo.png" className="h-12 mr-3" alt="Flowbite new-logo" />
+          {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">MPT</span> */}
+        </a>
+        <ul className="px-4 p-6">
+          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="./">หน้าแรก</a> </li>
+          <li className="p-2 hover:bg-cyan-500 hover:rounded-full">
+            <Menu as="div" className="relative inline-block hover:rounded-full w-full">
+              <div >
+                <Menu.Button className="inline-flex w-full justify-center items-center ">
+                  เกี่ยวกับเรา 
+                  
+                    <AiOutlineDown
+                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-100"
+                    aria-hidden="true" />
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute mt-2 w-full right-0 divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="px-1 py-1 ">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Edit
+                        </button>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Duplicate
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </div>
+                  {/* <div className="px-1 py-1">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                        >
+                          {active ? (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <AiFillHeart
+                              className="mr-2 h-5 w-5"
+                              aria-hidden="true"
+                            />
+                          )}
+                          Archive
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </div> */}
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          </li>
+          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="services" >Guild</a> </li>
+          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="services" >Services</a> </li>
+          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="contents" >News</a> </li>
+          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="contact" >Contact</a> </li>
+        </ul>
+      </div>
+    </nav>
+  )
 }
 
-export default Navbar;
+
+
