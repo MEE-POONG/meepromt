@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
-const ThemeChanger = () => {
+const ThemeChanger: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
@@ -17,7 +16,6 @@ const ThemeChanger = () => {
           onClick={() => setTheme("light")}
           className="text-gray-300 rounded-full outline-none focus:outline-none">
           <span className="sr-only">Light Mode</span>
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5"
