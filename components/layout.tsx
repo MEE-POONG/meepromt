@@ -1,20 +1,24 @@
+// Layout.tsx
+import React, { useState } from 'react';
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/navbar';
-import Footer from '../src/pages/footer';
+import TheNavbar from './TheNavbar';
+import TheFooter from './TheFooter';
+// import TheOffcanvas from './TheOffcanvas';
 const inter = Inter({ subsets: ['latin'] })
 
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode
-}) { 
+const TheLayOut: React.FC<LayoutProps> = ({ children }) => {
+
   return (
     <>
-     <Navbar/>
+      <TheNavbar />
       <main className={inter.className}>{children}</main>
-      <Footer/>
+      <TheFooter />
     </>
+  );
+};
 
-  )
-}
+export default TheLayOut;

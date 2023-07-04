@@ -1,10 +1,11 @@
 import { Menu, Transition } from "@headlessui/react";
-import React, { useState, Fragment} from "react";
+import React, { useState, Fragment } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import { AiOutlineDown, AiFillHeart, AiOutlineUp } from "react-icons/ai";
 
-export default function Navbar() {
+const TheNavbar: React.FC = () => {
+
   const [nav, setNav] = useState(false)
 
   const handleNav = () => {
@@ -31,18 +32,18 @@ export default function Navbar() {
               <div onClick={handleNav}>
                 <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
                   About
-                  {!nav ? 
+                  {!nav ?
                     <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                    aria-hidden="true" /> 
-                    : 
+                      aria-hidden="true" />
+                    :
                     <AiOutlineUp
-                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                    aria-hidden="true"
-                   />}
-                  
+                      className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
+                      aria-hidden="true"
+                    />}
+
                 </Menu.Button>
               </div>
-              <Transition 
+              <Transition
                 as={Fragment}
                 enter="transition ease-out duration-100"
                 enterFrom="transform opacity-0 scale-95"
@@ -116,18 +117,18 @@ export default function Navbar() {
           </li>
           <li>
             <Menu as="div" className="relative inline-block text-left">
-            <div onClick={handleNav}>
+              <div onClick={handleNav}>
                 <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
                   ประชาสัมพันธ์
-                  {!nav ? 
+                  {!nav ?
                     <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                    aria-hidden="true" /> 
-                    : 
+                      aria-hidden="true" />
+                    :
                     <AiOutlineUp
-                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                    aria-hidden="true"
-                   />}
-                  
+                      className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
+                      aria-hidden="true"
+                    />}
+
                 </Menu.Button>
               </div>
               <Transition
@@ -206,9 +207,9 @@ export default function Navbar() {
             <Menu as="div" className="relative inline-block hover:rounded-full w-full">
               <div >
                 <Menu.Button className="inline-flex w-full justify-center items-center ">
-                  เกี่ยวกับเรา 
-                  
-                    <AiOutlineDown
+                  เกี่ยวกับเรา
+
+                  <AiOutlineDown
                     className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-100"
                     aria-hidden="true" />
                 </Menu.Button>
@@ -303,6 +304,5 @@ export default function Navbar() {
     </nav>
   )
 }
-
-
+export default TheNavbar;
 
