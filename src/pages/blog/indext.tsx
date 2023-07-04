@@ -6,7 +6,7 @@ import {
     Typography,
     Button
 } from "@material-tailwind/react";
-import Layout from "../layout";
+import Layout from "../../../components/layout";
 
 export default function BlogPage() {
     return (
