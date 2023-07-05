@@ -12,14 +12,13 @@ export default function Home() {
           <p className="max-w-sm font-bold text-xl mb-5">
             Me Prompt Technology Company Limited
           </p>
-          <h1
+          <h2
             className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
           >
             รับทำเว็บไซต์ และการตลาดออนไลน์
-          </h1>
+          </h2>
         </div>
-          <HometIndex />
-          <GuildIndex/>
+          
           
       </div>
     </TheLayout>
