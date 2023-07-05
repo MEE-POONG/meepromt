@@ -15,7 +15,9 @@ const TheLayOut: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <TheNavbar />
-      <main className={inter.className}>{children}</main>
+      <main className={inter.className}>
+        {children}
+      </main>
       <TheFooter />
     </>
   );

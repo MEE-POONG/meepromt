@@ -1,262 +1,269 @@
-import { Menu, Transition } from "@headlessui/react";
-import React, { useState, Fragment } from "react";
-import { FiAlignJustify } from "react-icons/fi";
-import { RxCross1 } from "react-icons/rx";
-import { AiOutlineDown, AiFillHeart, AiOutlineUp } from "react-icons/ai";
-import Link from "next/link";
+import React from "react";
+import {
+  Navbar,
+  Collapse,
+  Typography,
+  Button,
+  IconButton,
+  List,
+  ListItem,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Chip,
+} from "@material-tailwind/react";
+import {
+  ChevronDownIcon,
+  UserCircleIcon,
+  CubeTransparentIcon,
+  Bars3Icon,
+  XMarkIcon,
+  FlagIcon,
+  ChatBubbleOvalLeftIcon,
+  UsersIcon,
+  FolderIcon,
+  Square3Stack3DIcon,
+  RocketLaunchIcon,
+  FaceSmileIcon,
+  PuzzlePieceIcon,
+  GiftIcon,
+} from "@heroicons/react/24/outline";
 
-const TheNavbar: React.FC = () => {
+const colors: any = {
+  blue: "bg-blue-50 text-blue-500",
+  orange: "bg-orange-50 text-orange-500",
+  green: "bg-green-50 text-green-500",
+  "blue-gray": "bg-blue-gray-50 text-blue-gray-500",
+  purple: "bg-purple-50 text-purple-500",
+  teal: "bg-teal-50 text-teal-500",
+  cyan: "bg-cyan-50 text-cyan-500",
+  pink: "bg-pink-50 text-pink-500",
+};
 
-  const [navOpen, setNav] = useState(true)
+const navListMenuItems = [
+  {
+    color: "blue",
+    icon: FlagIcon,
+    title: "About us",
+    description: "Learn about our story and our mission statement.",
+  },
+  {
+    color: "orange",
+    icon: ChatBubbleOvalLeftIcon,
+    title: "Press",
+    description: "News and writings, press releases, and resources",
+  },
+  {
+    color: "green",
+    icon: UsersIcon,
+    title: (
+      <div className="flex items-center gap-1">
+        Careers{" "}
+        <Chip
+          size="sm"
+          color="green"
+          variant="ghost"
+          value="We're hiring!"
+          className="capitalize"
+        />
+      </div>
+    ),
+    description: "We are always looking for talented people. Join us!",
+  },
+  {
+    color: "blue-gray",
+    icon: FolderIcon,
+    title: "Legal",
+    description: "All the stuff that we dan from legal made us add.",
+  },
+  {
+    color: "purple",
+    icon: RocketLaunchIcon,
+    title: "Products",
+    description: "Checkout our products that helps a startup running.",
+  },
+  {
+    color: "teal",
+    icon: FaceSmileIcon,
+    title: "Icons",
+    description: "Set of beautiful icons that you can use in your project.",
+  },
+  {
+    color: "cyan",
+    icon: PuzzlePieceIcon,
+    title: "UI Kits",
+    description: "High quality UI Kits helps you to 2x faster.",
+  },
+  {
+    color: "pink",
+    icon: GiftIcon,
+    title: "Open Source",
+    description: "List of all our open-source projects, it's all free.",
+  },
+];
 
-  const handleNav = () => {
-    setNav(!navOpen)
-  }
+function NavListMenu() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
+  const renderItems = navListMenuItems.map(
+    ({ icon, title, description, color }, key) => (
+      <a href="#" key={key}>
+        <MenuItem className="flex items-center gap-3 rounded-lg">
+          <div className={`rounded-lg p-5 ${colors[color]}`}>
+            {React.createElement(icon, {
+              strokeWidth: 2,
+              className: "h-6 w-6",
+            })}
+          </div>
+          <div>
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="flex items-center text-sm"
+            >
+              {title}
+            </Typography>
+            <Typography variant="small" color="gray" className="font-normal">
+              {description}
+            </Typography>
+          </div>
+        </MenuItem>
+      </a>
+    )
+  );
 
   return (
-    <nav className="container flex flex-wrap items-center justify-between mx-auto p-4 font-font01">
-      <Link href="/." className="flex items-center">
-        <img src="./images/new-logo.png" className=" h-14 mr-3" alt="" />
-        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-violet-700 ">MPT</span> */}
-      </Link>
-      <div onClick={handleNav} className=" block md:hidden">
-        {!navOpen? <RxCross1 size={20} /> : <FiAlignJustify size={20} />}
+    <React.Fragment>
+      <Menu
+        open={isMenuOpen}
+        handler={setIsMenuOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+      >
+        <MenuHandler>
+          <Typography as="div" variant="small" className="font-normal">
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4"
+              selected={isMenuOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
+              Resources
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                  }`}
+              />
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
+              />
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+          <ul className="grid grid-cols-4 gap-y-2">{renderItems}</ul>
+        </MenuList>
+      </Menu>
+      <div className="block lg:hidden">
+        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
       </div>
-      <div className="hidden w-full md:block md:w-auto" id="navbar">
-        <ul className={"font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 "}>
-          <li>
-            <a href="./" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 " aria-current="page">หน้าแรก</a>
-          </li>
-
-          <li className="">
-            <Menu as="div" className="relative text-left">
-              <div onClick={handleNav}>
-                <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
-                  About
-                  {!navOpen?
-                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                      aria-hidden="true" />
-                    :
-                    <AiOutlineUp
-                      className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                      aria-hidden="true"
-                    />}
-
-                </Menu.Button>
-              </div>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-
-                      {({ active }) => (
-                        <a href="about">
-                          <button
-                            className={`${active ? 'bg-sky-300 text-white ' : 'text-gray-900'
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          >
-                            เกี่ยวกับเรา
-                          </button>
-                        </a>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <a href="teams">
-                          <button
-                            className={`${active ? 'bg-violet-400 text-white' : 'text-gray-900'
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                          >
-                            Team
-                          </button>
-                        </a>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
-          </li>
-
-          <li>
-            <a href="ourwork" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ผลงาน</a>
-          </li>
-          <li>
-            <a href="guild" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">กิลด์</a>
-          </li>
-          <li>
-            <Menu as="div" className="relative inline-block text-left">
-              <div onClick={handleNav}>
-                <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
-                  ประชาสัมพันธ์
-                  {!navOpen ?
-                    <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                      aria-hidden="true" />
-                    :
-                    <AiOutlineUp
-                      className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                      aria-hidden="true"
-                    />}
-
-                </Menu.Button>
-              </div>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button
-                          className={`${active ? 'bg-sky-300 text-white' : 'text-gray-900'
-                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          {active ? (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          Edit
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button
-                          className={`${active ? 'bg-sky-400 text-white' : 'text-gray-900'
-                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          {active ? (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          Duplicate
-                        </button>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
-          </li>
-          <li>
-            <a href="contact" className="block py-2 pl-3 pr-4 text-black hover:text-violet-700 rounded md:p-0 ">ติดต่อ</a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Mobile Nav */}
-      <div className={!navOpen ? 'z-30 fixed left-0 top-0 w-[80%] h-full border-r text-center border-r-gray-800 bg-black opacity-90 text-white ease-in-out duration-300 md:hidden' : 'fixed left-[-100%]'}>
-        <a href="/." className="flex items-center p-5">
-          <img src="images/new-logo.png" className="h-12 mr-3" alt="Flowbite new-logo" />
-          {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">MPT</span> */}
-        </a>
-        <ul className="px-4 p-6">
-          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="./">หน้าแรก</a> </li>
-          <li className="p-2 hover:bg-cyan-500 hover:rounded-full">
-            <Menu as="div" className="relative inline-block hover:rounded-full w-full">
-              <div >
-                <Menu.Button className="inline-flex w-full justify-center items-center ">
-                  เกี่ยวกับเรา
-
-                  <AiOutlineDown
-                    className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-100"
-                    aria-hidden="true" />
-                </Menu.Button>
-              </div>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute mt-2 w-full right-0 divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button
-                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          {active ? (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          Edit
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button
-                          className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          {active ? (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          ) : (
-                            <AiFillHeart
-                              className="mr-2 h-5 w-5"
-                              aria-hidden="true"
-                            />
-                          )}
-                          Duplicate
-                        </button>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
-          </li>
-          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="services" >Guild</a> </li>
-          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="services" >Services</a> </li>
-          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="contents" >News</a> </li>
-          <li className="p-2 hover:bg-cyan-500 hover:rounded-full"><a href="contact" >Contact</a> </li>
-        </ul>
-      </div>
-    </nav>
-  )
+    </React.Fragment>
+  );
 }
-export default TheNavbar;
 
+function NavList() {
+  return (
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <CubeTransparentIcon className="h-[18px] w-[18px]" />
+          Blocks
+        </ListItem>
+      </Typography>
+      <NavListMenu />
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <UserCircleIcon className="h-[18px] w-[18px]" />
+          Account
+        </ListItem>
+      </Typography>
+    </List>
+  );
+}
+
+export default function Example() {
+  const [openNav, setOpenNav] = React.useState(false);
+
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false)
+    );
+  }, []);
+
+  return (
+    <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+      <div className="flex items-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          variant="h6"
+          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+        >
+          Material Tailwind
+        </Typography>
+        <div className="hidden lg:block">
+          <NavList />
+        </div>
+        <div className="hidden gap-2 lg:flex">
+          <Button variant="text" size="sm" color="blue-gray">
+            Sign In
+          </Button>
+          <Button variant="gradient" size="sm">
+            Sign Up
+          </Button>
+        </div>
+        <IconButton
+          variant="text"
+          color="blue-gray"
+          className="lg:hidden"
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {openNav ? (
+            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+          ) : (
+            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+          )}
+        </IconButton>
+      </div>
+      <Collapse open={openNav}>
+        <NavList />
+        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+            Sign In
+          </Button>
+          <Button variant="gradient" size="sm" fullWidth>
+            Sign Up
+          </Button>
+        </div>
+      </Collapse>
+    </Navbar>
+  );
+}
