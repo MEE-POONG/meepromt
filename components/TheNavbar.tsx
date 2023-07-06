@@ -104,7 +104,7 @@ const navListMenuItems = [
 ];
 
 function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const renderItems = navListMenuItems.map(
@@ -120,12 +120,12 @@ function NavListMenu() {
           <div>
             <Typography
               variant="h6"
-              color="blue-gray"
+
               className="flex items-center text-sm"
             >
               {title}
             </Typography>
-            <Typography variant="small" color="gray" className="font-normal">
+            <Typography variant="small" className="font-normal">
               {description}
             </Typography>
           </div>
@@ -146,11 +146,11 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-normal">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4"
+              className="flex items-center gap-2 py-2 pr-4 text-white"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
+              <Square3Stack3DIcon className="h-[18px] w-[18px] " />
               Resources
               <ChevronDownIcon
                 strokeWidth={2.5}
@@ -165,7 +165,7 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block bg-black">
           <ul className="grid grid-cols-4 gap-y-2">{renderItems}</ul>
         </MenuList>
       </Menu>
@@ -183,10 +183,10 @@ function NavList() {
         as="a"
         href="#"
         variant="small"
-        color="blue-gray"
+
         className="font-normal"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 text-white">
           <CubeTransparentIcon className="h-[18px] w-[18px]" />
           Blocks
         </ListItem>
@@ -196,10 +196,10 @@ function NavList() {
         as="a"
         href="#"
         variant="small"
-        color="blue-gray"
+
         className="font-normal"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 text-white">
           <UserCircleIcon className="h-[18px] w-[18px]" />
           Account
         </ListItem>
@@ -219,8 +219,11 @@ export default function Example() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <Navbar className="mt-2 mx-auto max-w-screen-xl px-4 py-2 bg-black text-white "
+    // variant="gradient"
+    // color="white"
+    >
+      <div className="flex items-center justify-between 	">
         <Typography
           as="a"
           href="#"
@@ -233,7 +236,7 @@ export default function Example() {
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
+          <Button variant="text" size="sm" >
             Sign In
           </Button>
           <Button variant="gradient" size="sm">
@@ -242,7 +245,7 @@ export default function Example() {
         </div>
         <IconButton
           variant="text"
-          color="blue-gray"
+
           className="lg:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
@@ -256,7 +259,7 @@ export default function Example() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+          <Button variant="outlined" size="sm" fullWidth>
             Sign In
           </Button>
           <Button variant="gradient" size="sm" fullWidth>
