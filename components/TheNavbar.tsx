@@ -116,7 +116,7 @@ const TheNavbar: React.FC = () => {
     </ul>
   );
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 text-blue-400 font-bold">
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-2 text-blue-400 font-bold">
       <div className="container mx-auto flex items-center justify-between ">
         <Typography
           as="a"

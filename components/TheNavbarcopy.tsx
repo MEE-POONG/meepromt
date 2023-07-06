@@ -24,7 +24,7 @@ export default function TheNavbarTwo() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-normal ap-2 lg:rounded-full"
       >
         <a href="#" className="flex items-center">
           Pages
