@@ -18,8 +18,9 @@ export default function Home() {
             รับทำเว็บไซต์ และการตลาดออนไลน์
           </h2>
         </div>
-          
-          
+        <HometIndex />
+        <GuildIndex />
+
       </div>
     </TheLayout>
   )
