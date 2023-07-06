@@ -1,11 +1,11 @@
 import React, { useState, Fragment } from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
   Button,
   IconButton,
   Card,
+  Collapse,
 } from "@material-tailwind/react";
 import { Menu, Transition } from "@headlessui/react";
 
@@ -29,12 +29,12 @@ const TheNavbar: React.FC = () => {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="blue-400"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Pages
@@ -43,8 +43,8 @@ const TheNavbar: React.FC = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="blue-400"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Account
@@ -53,8 +53,8 @@ const TheNavbar: React.FC = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="blue-400"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Blocks
@@ -63,22 +63,13 @@ const TheNavbar: React.FC = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="blue-400"
+        className="p-1 font-bold"
       >
         <Menu as="div" className="relative text-left">
           <div onClick={handleNav}>
-            <Menu.Button className="inline-flex rounded-md text-black hover:text-violet-700">
+            <Menu.Button className="inline-flex rounded-md text-blue-400 hover:text-violet-700">
               About
-              {!navOpen ?
-                <AiOutlineDown className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                  aria-hidden="true" />
-                :
-                <AiOutlineUp
-                  className="ml-2 -mr-1 h-5 w-3 text-gray-600 hover:text-violet-700"
-                  aria-hidden="true"
-                />}
-
             </Menu.Button>
           </div>
           <Transition
@@ -125,14 +116,16 @@ const TheNavbar: React.FC = () => {
     </ul>
   );
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 text-blue-400 font-bold">
+      <div className="container mx-auto flex items-center justify-between ">
         <Typography
           as="a"
           href="/"
-          className="mr-4 cursor-pointer py-1.5 font-medium"
+          color="blue-400"
+          className="cursor-pointer py-1.5 font-bold "
         >
-          <img src="./images/new-logo.png" className=" h-14 mr-3" alt="" />
+          <img src="./images/new-logo.png" className=" h-10 mx-auto" alt="" />
+          Me Prompt Technology
         </Typography>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
@@ -182,12 +175,12 @@ const TheNavbar: React.FC = () => {
           </IconButton>
         </div>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         {navList}
         <Button variant="gradient" size="sm" fullWidth className="mb-2">
           <span>Buy Now</span>
         </Button>
-      </MobileNav>
+      </Collapse >
     </Navbar>
   )
 }
