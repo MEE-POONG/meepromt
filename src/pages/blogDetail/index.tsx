@@ -2,6 +2,7 @@ import TheLayOut from "@/components/TheLayout";
 import { BsCalendar3 } from "react-icons/bs";
 import { BiTime } from "react-icons/bi";
 import { Card, CardHeader, CardBody, CardFooter, Typography, Button } from "@material-tailwind/react";
+import Link from "next/link";
 
 export default function BlogDetail() {
     return (
@@ -38,8 +39,14 @@ export default function BlogDetail() {
                             <p>Best of all it has been developed by someone with deep knowledge of usability best practices and industry experience who is Nielsen Norman UX certified, so you are in safe hands!</p>
 
                             <p>Not sure what a UX audit is or why it’s valuable? Find all the answers here — UX Audit: Why it’s valuable, the business benefits and ensuring users keep coming back</p>
-                       
+
                             <h3>Recommended 6 step approach to conducting a UX audit</h3>
+                            <p>There’s no universal format for the UX audit since its size and structure depend on the specific situation and work complexity, however this would be the recommended approach as the core components to be included:</p>
+
+                            <ol className="list-decimal">
+                                <li>Understand business objectives</li>
+                            </ol>
+
                         </article>
 
                     </div>
@@ -62,9 +69,9 @@ export default function BlogDetail() {
                                     </Typography>
                                 </CardBody>
                                 <CardFooter className="p-1 text-right">
-                                    <a href="blogDetail">
+                                    <Link href="blogDetail">
                                         <Button className=" bg-black rounded-full hover:bg-sky-500 text-sm font-font01 p-3">อ่านเพิ่ม</Button>
-                                    </a>
+                                    </Link>
                                 </CardFooter>
                             </Card>
                         </div>
