@@ -41,34 +41,35 @@ export default function TheNavbar() {
             color="blue"
             className="p-1 font-medium font-font01"
           >
-            <a href={navItem.pathLink} className="flex items-center">
+            <Link href={navItem.pathLink} className="flex items-center">
               {navItem.name.EN}
-            </a>
+            </Link>
           </Typography>
 
         ) : (
-          <Typography
-            key={index}
-            as="li"
-            variant="small"
-            color="blue"
-            className="p-1 font-medium font-font01"
-          >
-            <HoverMenu>
-              <MenuHandler>
-                <a href={navItem.pathLink} className="flex items-center">
-                  {navItem.name.EN}
-                </a>
-              </MenuHandler>
-              <MenuList>
-                {navListData.filter(navListItem => navListItem?.headLink === navItem.pathLink)
-                  .map((navListItem, index) => (
-                    <MenuItem key={index}>{navListItem.name.EN}</MenuItem>
-                  ))}
-              </MenuList>
 
-            </HoverMenu>
-          </Typography>
+          <HoverMenu key={index}>
+            <MenuHandler>
+              <Typography
+
+                as="li"
+                variant="small"
+                color="blue"
+                className="p-1 font-medium font-font01"
+              >
+                <Link href={navItem.pathLink} className="flex items-center">
+                  {navItem.name.EN}
+                </Link>
+              </Typography>
+            </MenuHandler>
+            <MenuList>
+              {navListData.filter(navListItem => navListItem?.headLink === navItem.pathLink)
+                .map((navListItem, index) => (
+                  <MenuItem key={index}>{navListItem.name.EN}</MenuItem>
+                ))}
+            </MenuList>
+
+          </HoverMenu>
         )
       ))}
     </ul>
