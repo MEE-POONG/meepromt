@@ -1,6 +1,5 @@
 export const navData = [
     { name: { EN: "home", TH: "หน้าแรก" }, pathLink: "/", headMenu: false },
-    // { name: { EN: "Service", TH: "บริการ" }, pathLink: "/our-service", headMenu: false },
     { name: { EN: "news", TH: "ข่าวสาร" }, pathLink: "/news", headMenu: true },
     { name: { EN: "about us", TH: "เกี่ยวกับเรา" }, pathLink: "/about", headMenu: true },
     { name: { EN: "workings", TH: "ผลงาน" }, pathLink: "/workings", headMenu: false },
