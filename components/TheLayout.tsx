@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Inter } from 'next/font/google'
 import TheNavbar from '@/components/TheNavbar';
 import TheFooter from './TheFooter';
+import TheNavbarThree from './TheNavbarThree';
 // import TheOffcanvas from './TheOffcanvas';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ const TheLayOut: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <TheNavbar />
+      <TheNavbarThree />
       <main className={inter.className}>{children}</main>
       <TheFooter />
     </>

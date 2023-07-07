@@ -1,0 +1,7 @@
+body {
+  .gradient-red-blue {
+    background: linear-gradient(to left, red, #6f03d3, #1729f2, #2a8bff, #00bdf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

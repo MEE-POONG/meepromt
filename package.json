@@ -1,5 +1,5 @@
 {
-  "name": "tw-test",
+  "name": "me-prompt-technology",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,15 +12,11 @@
     "@headlessui/react": "^1.7.15",
     "@material-tailwind/react": "^2.0.1",
     "@types/node": "20.2.3",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
     "@types/react-slick": "^0.23.10",
-    "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",
     "next-themes": "^0.2.1",
-    "postcss": "8.4.23",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
@@ -28,11 +24,18 @@
     "react-slick": "^0.29.0",
     "sass": "^1.63.6",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "^3.3.2",
     "tailwindcss-animated": "^1.0.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@tailwindcss/typography": "^0.5.9"
+=======
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.25",
+    "tailwindcss": "^3.3.2"
+>>>>>>> fa9b1064e19d8f908ca72c666b1d2d1c4601060b
   }
 }
