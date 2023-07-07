@@ -12,7 +12,7 @@ export default function Personals() {
           <h2 className='text-3xl text-violet-800 font-bold mb-8 text-center'>Team Me Promt</h2>
           <div className=" flex flex-col md:flex-row justify-center items-center">
             {/* card start */}
-            <div className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-xl hover:scale-95 md:mr-5 mb-5">
+            <div className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-lg hover:scale-95 md:mr-5 mb-5">
               <img className=" absolute w-full h-full object-cover" src="images/employee/est.jpg" alt="" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/10"></div>
               <div className="absolute top-60 left-5">
@@ -26,7 +26,7 @@ export default function Personals() {
             {/* card end */}
 
             {/* card start */}
-            <div className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-xl hover:scale-95 md:mr-5 mb-5">
+            <div className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-lg hover:scale-95 md:mr-5 mb-5">
               <img className=" absolute w-full h-full object-cover" src="images/employee/chun.jpg" alt="" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/10"></div>
               <div className="absolute top-60 left-5">
@@ -40,7 +40,7 @@ export default function Personals() {
             {/* card end */}
             
             {/* card start */}
-            <div className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-xl hover:scale-95 md:mr-5 mb-5">
+            <div className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-lg hover:scale-95 md:mr-5 mb-5">
               <img className=" absolute w-full h-full object-cover" src="images/employee/sam.jpeg" alt="" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/10"></div>
               <div className="absolute top-60 left-5">
@@ -61,7 +61,7 @@ export default function Personals() {
           <h2 className='text-3xl text-violet-800 font-bold mb-8 text-center'>Team Co-op</h2>
             <div className="flex flex-col md:flex-row justify-center items-center">
               {/* card start */}
-              <a href="about" className="relative overflow-hidden w-64 h-80 rounded-xl shadow-purple-400/50 shadow-xl hover:scale-95 mb-5">
+              <a href="about" className="relative overflow-hidden w-64 h-80 rounded-xl shadow-cyan-400/50 shadow-lg hover:scale-95 mb-5">
                 <img className=" absolute w-full h-full object-cover" src="images/est.jpg" alt="" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/10"></div>
                 <div className="absolute top-60 left-5">
