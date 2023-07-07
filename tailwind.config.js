@@ -21,6 +21,7 @@ module.exports = withMT({
     },
   },
   plugins: [
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    require('@tailwindcss/typography'),
   ],
 });

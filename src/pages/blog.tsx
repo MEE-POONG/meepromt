@@ -6,7 +6,7 @@ import {
     Typography,
     Button
 } from "@material-tailwind/react";
-import Layout from "../../components/TheLayout";
+import Layout from "@/components/TheLayout";
 
 export default function BlogPage() {
     return (
@@ -30,9 +30,9 @@ export default function BlogPage() {
                                 </Typography>
                             </CardBody>
                             <CardFooter className="p-1 text-right">
-                                <a href="/blogDetail">
+                                {/* <a href="/blogDetail">
                                     <Button className=" bg-black rounded-full hover:bg-sky-500 text-sm font-font01 p-3">อ่านเพิ่ม</Button>
-                                </a>
+                                </a> */}
                             </CardFooter>
                         </Card>
                     </div>
