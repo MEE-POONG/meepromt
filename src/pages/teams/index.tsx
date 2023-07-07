@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import Layout from "../../../components/TheLayout";
+import Layout from "@/components/TheLayout";
 import { FiFacebook, FiPhone } from "react-icons/fi";
 import CoopTeam from "./Co-opTeam";
 

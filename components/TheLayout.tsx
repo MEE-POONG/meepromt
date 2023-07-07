@@ -1,7 +1,7 @@
 // Layout.tsx
 import React, { useState } from 'react';
 import { Inter } from 'next/font/google'
-import TheNavbar from '@/components/TheNavbar';
+import TheNavbar from './TheNavbar';
 import TheFooter from './TheFooter';
 import TheNavbarThree from './TheNavbarThree';
 // import TheOffcanvas from './TheOffcanvas';
@@ -18,7 +18,7 @@ const TheLayOut: React.FC<LayoutProps> = ({ children }) => {
       <TheNavbar />
       <TheNavbarThree />
       <main className={inter.className}>{children}</main>
-      <TheFooter />
+      {/* <TheFooter /> */}
     </>
   );
 };
