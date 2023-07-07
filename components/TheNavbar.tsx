@@ -9,10 +9,10 @@ import {
 } from "@material-tailwind/react";
 import { Menu, Transition } from "@headlessui/react";
 
-import { AiOutlineDown, AiFillHeart, AiOutlineUp } from "react-icons/ai";
-import { FiAlignJustify } from "react-icons/fi";
-import { RxCross1 } from "react-icons/rx";
-import Link from 'next/link'
+// import { AiOutlineDown, AiFillHeart, AiOutlineUp } from "react-icons/ai";
+// import { FiAlignJustify } from "react-icons/fi";
+// import { RxCross1 } from "react-icons/rx";
+// import Link from 'next/link'
 
 const TheNavbar: React.FC = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
