@@ -30,7 +30,7 @@ export default function BlogDetail() {
                     <div className=" col-span-2 md:col-span-3">
                         <img className="mx-auto" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*76Qb1fvqzkgSM30lfoFDRQ.jpeg" alt="" />
 
-                        <article className="prose lg:prose-xl mt-4 whitespace-normal lg:text-justify">
+                        <article className="prose lg:prose-xl mt-8 whitespace-normal lg:text-justify">
                             <h3>Building blocks for a UX audit</h3>
                             <p>You want to perform a UX audit (sometimes referred to as a UX review) after identifying improvements needed to your digital product, e-commerce platform or website. After some research, you have come across several differing approaches, no standard method and are unsure exactly how to conduct a UX audit.</p>
 
