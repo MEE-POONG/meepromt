@@ -1,4 +1,4 @@
-import Layout from "../../../components/TheLayout";
+import Layout from "@/components/TheLayout";
 
 export default function CoopTeam() {
   return (

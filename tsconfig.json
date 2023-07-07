@@ -35,6 +35,9 @@
       ],
       "@/container/*": [
         "./container/*"
+      ],
+      "@/data/*": [
+        "./data/*"
       ]
     }
   },

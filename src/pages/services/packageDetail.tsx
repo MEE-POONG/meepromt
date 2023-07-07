@@ -1,5 +1,5 @@
 import { FiPhoneCall } from "react-icons/fi";
-import Layout from "../../../components/TheLayout";
+import Layout from "@/components/TheLayout";
 
 
 export default function PackageDetail() {
