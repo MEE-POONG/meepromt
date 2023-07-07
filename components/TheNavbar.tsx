@@ -55,7 +55,7 @@ export default function TheNavbar() {
                 as="li"
                 variant="small"
                 color="blue"
-                className="p-1 font-medium font-font01"
+                className="p-1 font-medium font-font01 text-black hover:text-blue-400"
               >
                 <Link href={navItem.pathLink} className="flex items-center">
                   {navItem.name.EN}
