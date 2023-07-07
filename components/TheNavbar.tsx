@@ -39,7 +39,7 @@ export default function TheNavbar() {
             as="li"
             variant="small"
             color="blue"
-            className="p-1 font-medium font-font01"
+            className="p-1 font-medium font-font01 text-black hover:text-blue-400"
           >
             <Link href={navItem.pathLink} className="flex items-center">
               {navItem.name.EN}
@@ -78,17 +78,17 @@ export default function TheNavbar() {
   return (
     <>
       <Navbar className="sticky top z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
-        <div className="flex items-center justify-between text-blue-400 container mx-auto">
+        <div className="flex items-center justify-between container mx-auto">
           <Typography
             as="a"
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-bold font-font01"
           >
             <img src="./images/new-logo.png" className=" h-14 mx-auto" alt="" />
-            Me Prompt Tecnology
+            <span className="text-blue-400">Me Prompt Tecnology</span>
           </Typography>
-          <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+          <div className="flex items-center gap-4 ">
+            <div className="mr-4 hidden lg:block ">{navList}</div>
             <Button
               variant="gradient"
               size="sm"
@@ -135,6 +135,8 @@ export default function TheNavbar() {
             </IconButton>
           </div>
         </div>
+
+        {/* Mobile Nav */}
         <Collapse open={openNav}>
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
