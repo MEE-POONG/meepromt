@@ -8,13 +8,17 @@ import {
 } from "@material-tailwind/react";
 import Layout from "@/components/TheLayout";
 import Link from "next/link";
+import { NewsSlider } from "@/container/news-slids";
 
 export default function BlogPage() {
     return (
         <Layout>
+            
             <section className="container mx-auto font-font01 py-24">
+            <NewsSlider/>
+            <div className="mt-12 bg-blue-gray-300/20 p-5 rounded-md">
                 <h2 className="text-3xl">บทความ</h2>
-                <div className="mt-20">
+                <div className="mt-12">
                     <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-6" >
                         <Card className="mt-6 w-72 p-3">
                             <CardHeader color="blue-gray" className="relative -translate-y-6">
@@ -38,6 +42,7 @@ export default function BlogPage() {
                         </Card>
                     </div>
                 </div>
+            </div>
             </section>
         </Layout>
     )
