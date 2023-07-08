@@ -10,18 +10,14 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
-import { navData, navListData } from '@/data/navber';
+import { navData } from '@/data/navber';
 import Link from "next/link";
 import HoverMenu from "./HoverMenu";
-interface NavItem {
-  name: { EN: string, TH: string },
-  pathLink: string,
-  headMenu: boolean,
-  headLink: string | null,
-}
+import { useRouter } from "next/router";
 
 export default function TheNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
+  const router = useRouter(); // add this line
 
   React.useEffect(() => {
     window.addEventListener(
@@ -33,44 +29,47 @@ export default function TheNavbar() {
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {navData.map((navItem, index) => (
-        !navItem.headMenu ? (
-          <Typography
-            key={index}
-            as="li"
-            variant="small"
-            color="blue"
-            className="p-1 font-medium font-font01 text-black hover:text-blue-400"
-          >
-            <Link href={navItem.pathLink} className="flex items-center">
-              {navItem.name.EN}
-            </Link>
-          </Typography>
-
-        ) : (
-
-          <HoverMenu key={index}>
-            <MenuHandler>
-              <Typography
-
-                as="li"
-                variant="small"
-                color="blue"
-                className="p-1 font-medium font-font01 text-black hover:text-blue-400"
-              >
-                <Link href={navItem.pathLink} className="flex items-center">
-                  {navItem.name.EN}
-                </Link>
-              </Typography>
-            </MenuHandler>
-            <MenuList>
-              {navListData.filter(navListItem => navListItem?.headLink === navItem.pathLink)
-                .map((navListItem, index) => (
-                  <MenuItem key={index}>{navListItem.name.EN}</MenuItem>
+        <React.Fragment key={index}>
+          {navItem.headMenu.length === 0 ? (
+            <Typography
+              as="li"
+              variant="small"
+              color="blue"
+              className={`p-1 text-lg font-medium font-font01 ${router.pathname === navItem.pathLink ? "text-blue-400" : "text-black hover:text-blue-400"}`}
+            >
+              <Link href={navItem.pathLink} className="flex items-center">
+                {navItem.name.TH}
+              </Link>
+            </Typography>
+          ) : (
+            <HoverMenu>
+              <MenuHandler>
+                <Typography
+                  as="li"
+                  variant="small"
+                  color="blue"
+                  className={`p-1 text-lg font-medium font-font01 ${router.pathname === navItem.pathLink ? "text-blue-400" : "text-black hover:text-blue-400"}`}
+                >
+                  <Link href={navItem.pathLink} className="flex items-center">
+                    {navItem.name.TH}
+                  </Link>
+                </Typography>
+              </MenuHandler>
+              <MenuList >
+                {navItem.headMenu.map((subItem, subIndex) => (
+                  <li key={subIndex}
+                    role="menuitem"
+                    className={`block w-full cursor-pointer font-font01 font-medium select-none rounded-md px-3 pt-[9px] py-2 text-center transition-all ${router.pathname === subItem.pathLink ? "text-white bg-blue-400" : "hover:border-none hover:bg-blue-400 hover:text-white focus-visible:outline-none focus:border-none focus:bg-blue-400 focus:text-white active:border-none active:bg-blue-400 active:text-white"}`}
+                  >
+                    <Link href={subItem.pathLink}>
+                      {subItem.name.TH}
+                    </Link>
+                  </li>
                 ))}
-            </MenuList>
-
-          </HoverMenu>
-        )
+              </MenuList>
+            </HoverMenu>
+          )}
+        </React.Fragment>
       ))}
     </ul>
   );
