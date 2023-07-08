@@ -56,7 +56,7 @@ export default function BlogDetail() {
                             <h3 className="mt-4">Heuristic evaluation checklist</h3>
                             <p>The heuristic evaluation is the key aspect of your UX audit, taking the largest proportion of effort and as mentioned before you can follow an existing set of <a className="underline" href="https://www.nngroup.com/articles/ten-usability-heuristics/#poster">heuristics such as Jakob Nielsen’s</a> or develop your own.</p>
 
-                            <img className="mx-auto" src="https://miro.medium.com/v2/resize:fit:720/0*JXDDX6ux4GK9bPkm" alt="" />
+                            <img className="mx-auto my-7" src="https://miro.medium.com/v2/resize:fit:720/0*JXDDX6ux4GK9bPkm" alt="" />
 
                             <p>You can combine heuristic evaluations with shared elements across different journey types, such as sign up. Then for individual elements of different journeys heuristic evaluations will be required for each main step taken by the user.</p>
                             <p>As well as identifying usability issues and mapping them against your heuristics, using a checklist to ensure each individual usability error recognised has sufficient details around it. So when your audit is presented back, others can understand the context without additional explanation in person required.</p>
