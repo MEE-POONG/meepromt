@@ -1,13 +1,6 @@
 import React, { useContext, FC } from "react";
-
+import { LanguageContextProps } from './types'; // adjust the path based on where you put your types.ts
 import { LanguageContext } from './LanguageContext';
-
-type Language = 'EN' | 'TH';
-
-interface LanguageContextProps {
-  currentLanguage: Language;
-  setCurrentLanguage: (lang: Language) => void;
-}
 
 const BtnSetting: FC = () => {
     const { currentLanguage, setCurrentLanguage } = useContext<LanguageContextProps>(LanguageContext);
