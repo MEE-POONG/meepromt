@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 // import { newsData } from '@data/dataTest';
-// import { LanguageContext } from '@components/LanguageContext';
+import { LanguageContext } from '@/components/Language/LanguageContext';
 import Link from 'next/link';
 import { BsFacebook, BsPhoneFill } from 'react-icons/bs';
 // import HtmlContent from "@components/HtmlContent";
@@ -16,15 +16,15 @@ interface NewsItem {
 }
 
 const HomeSlide: React.FC = () => {
-    // const { currentLanguage } = useContext(LanguageContext);
+    const { currentLanguage } = useContext(LanguageContext);
     return (
         <div className="flex flex-col justify-center items-center text-center animate-fade-up">
             <img src="images/new-logo.png" className="w-72 " />
             <p className="max-w-sm font-bold text-xl mb-5">
-                Me Prompt Technology Company Limited
+                { }
             </p>
             <h2 className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
-                รับทำเว็บไซต์ และการตลาดออนไลน์
+                {currentLanguage === "TH" ? "รับทำเว็บไซต์ และการตลาดออนไลน์" : "Get a website and online marketing"}
             </h2>
             <h5>
                 <BsFacebook className='inline mr-1' />meprompttecnology
