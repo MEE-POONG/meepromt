@@ -14,6 +14,8 @@ import { navData } from '@/data/navber';
 import Link from "next/link";
 import HoverMenu from "./HoverMenu";
 import { useRouter } from "next/router";
+import { BsFillBellFill } from "react-icons/bs";
+import BtnSetting from "./BtnSetting";
 
 export default function TheNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -30,15 +32,15 @@ export default function TheNavbar() {
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {navData.map((navItem, index) => (
         <React.Fragment key={index}>
-          {navItem.headMenu.length === 0 ? (
+          {navItem?.headMenu.length === 0 ? (
             <Typography
               as="li"
               variant="small"
               color="blue"
-              className={`p-1 text-lg font-medium font-font01 text-black hover:text-blue-400 ${router.pathname === navItem.pathLink ? "active:text-blue-400" : ""}`}
+              className={`p-1 text-lg font-medium font-font01  hover:text-blue-400 ${router?.pathname === navItem?.pathLink ? "text-blue-400" : "text-black"}`}
             >
-              <Link href={navItem.pathLink} className="flex items-center">
-                {navItem.name.TH}
+              <Link href={navItem?.pathLink} className="flex items-center">
+                {navItem?.name?.TH}
               </Link>
             </Typography>
           ) : (
@@ -48,21 +50,21 @@ export default function TheNavbar() {
                   as="li"
                   variant="small"
                   color="blue"
-                  className={`p-1 text-lg font-medium font-font01 text-black hover:text-blue-400 ${router.pathname === navItem.pathLink ? "active:text-blue-400" : ""}`}
+                  className={`p-1 text-lg font-medium font-font01 hover:text-blue-400 ${router?.pathname === navItem?.pathLink ? "text-blue-400" : "text-black"}`}
                 >
-                  <Link href={navItem.pathLink} className="flex items-center">
-                    {navItem.name.TH}
+                  <Link href={navItem?.pathLink} className="flex items-center">
+                    {navItem?.name?.TH}
                   </Link>
                 </Typography>
               </MenuHandler>
               <MenuList >
-                {navItem.headMenu.map((subItem, subIndex) => (
+                {navItem?.headMenu.map((subItem, subIndex) => (
                   <li key={subIndex}
                     role="menuitem"
-                    className={`block w-full cursor-pointer font-font01 font-medium select-none rounded-md px-3 pt-[9px] py-2 text-center transition-all hover:border-none hover:bg-blue-400 hover:text-white focus-visible:outline-none focus:border-none focus:bg-blue-400 focus:text-white active:border-none active:bg-blue-400 active:text-white ${router.pathname === subItem.pathLink ? "active:text-white active:bg-blue-400" : ""}`}
+                    className={`block w-full cursor-pointer font-font01 font-medium select-none rounded-md px-3 pt-[9px] py-2 text-center transition-all hover:border-none hover:bg-blue-400 hover:text-white focus-visible:outline-none focus:border-none focus:bg-blue-400 focus:text-white active:border-none active:bg-blue-400 active:text-white ${router?.pathname === subItem?.pathLink ? "text-white bg-blue-400" : ""}`}
                   >
-                    <Link href={subItem.pathLink}>
-                      {subItem.name.TH}
+                    <Link href={subItem?.pathLink}>
+                      {subItem.name?.TH}
                     </Link>
                   </li>
                 ))}
@@ -88,13 +90,7 @@ export default function TheNavbar() {
           </Typography>
           <div className="flex items-center gap-4 ">
             <div className="mr-4 hidden lg:block ">{navList}</div>
-            <Button
-              variant="gradient"
-              size="sm"
-              className="hidden lg:inline-block"
-            >
-              <span>Buy Now</span>
-            </Button>
+            {/* <BtnSetting /> */}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -138,9 +134,7 @@ export default function TheNavbar() {
         {/* Mobile Nav */}
         <Collapse open={openNav}>
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Buy Now</span>
-          </Button>
+          {/* <BtnSetting /> */}
         </Collapse>
       </Navbar>
     </>
