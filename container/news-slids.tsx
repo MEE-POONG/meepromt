@@ -16,8 +16,8 @@ export const NewsSlider = () => {
 
   return (
     <>
-      <Slider {...settings} >
-        <div >
+      <Slider {...settings} className="w-screen">
+        <div className="w-full h-80 object-cover">
           <img src="images/banner2.jpg" alt="" />
         </div>
         <div>

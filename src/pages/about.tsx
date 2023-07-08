@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import Layout from '@/components/TheLayout'
 import Responsive from '@/container/AboutSlider'
+import TheLayOut from '@/components/TheLayout'
 
 export default function About() {
   return (
-    <Layout>
+    <TheLayOut>
       <img className=' w-screen' src='/images/banner.png' alt='Logo Me Prompt' />
       <div className='my-44'>
         <div className='py-24 bg-slate-100/50 rounded-md font-font01'>
@@ -39,6 +39,6 @@ export default function About() {
           <div className='h-1 rounded-full bg-black mt-10 bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500'></div>
         </div>
       </div>
-    </Layout>
+    </TheLayOut>
   )
 }
