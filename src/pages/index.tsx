@@ -1,8 +1,5 @@
 import Head from 'next/head'
 import TheLayout from '@/components/TheLayout'
-import HometIndex from '@/container/Home_index'
-import GuildIndex from '@/container/Guild_index'
-import { BsFacebook, BsPhone, BsPhoneFill } from 'react-icons/bs'
 export default function Home() {
   return (
     <TheLayout>
@@ -23,12 +20,8 @@ export default function Home() {
             รับทำเว็บไซต์ และการตลาดออนไลน์
           </h2>
           <h5>
-            <BsFacebook className='inline mr-1' />meprompttecnology
-            <BsPhoneFill className='inline mr-1 ml-2' />06-444-82650
-            <BsFacebook className='inline mr-1 ml-2' />meprompttecnology
           </h5>
         </div>
-        <HometIndex />
         {/* <GuildIndex /> */}
 
       </div>
