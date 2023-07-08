@@ -7,13 +7,11 @@ import {
     Button
 } from "@material-tailwind/react";
 import Link from "next/link";
-import { NewsSlider } from "@/container/news-slids";
 import TheLayOut from "@/components/TheLayout";
 
 export default function BlogPage() {
     return (
         <TheLayOut>
-            <div className=""><NewsSlider/></div>
             <section className="container mx-auto font-font01 py-24">
             <div className="mt-12  ">
                 <h2 className="text-3xl">บทความ</h2>
