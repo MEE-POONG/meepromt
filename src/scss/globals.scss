@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 @import "index.scss";
 @import "home.scss";
 @import "about.scss";
 @import "team.scss";
-
 
 h1 {
     font-size: 60px;
@@ -23,21 +22,26 @@ h3 {
 h4 {
     font-size: 30px;
 }
-.title, .topic {
+.title,
+.topic {
     font-size: 28px;
 }
-
 
 body {
     background-color: #ffffff;
     // background-image: conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60))
 }
 
-.bg-contact{
+.bg-contact {
     background-color: rgb(91, 33, 182);
-    background-image: linear-gradient(to right bottom, rgb(76, 29, 149), rgb(8, 145, 178), rgb(217, 119, 6))
+    background-image: linear-gradient(to right bottom, rgb(76, 29, 149), rgb(8, 145, 178), rgb(217, 119, 6));
 }
 
-
-
-
+.language {
+    img {
+        filter: grayscale(100%);
+    }
+    img.show {
+        filter: grayscale(0%);
+    }
+}
