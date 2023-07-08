@@ -35,7 +35,7 @@ export default function TheNavbar() {
               as="li"
               variant="small"
               color="blue"
-              className={`p-1 text-lg font-medium font-font01 ${router.pathname === navItem.pathLink ? "text-blue-400" : "text-black hover:text-blue-400"}`}
+              className={`p-1 text-lg font-medium font-font01 text-black hover:text-blue-400 ${router.pathname === navItem.pathLink ? "active:text-blue-400" : ""}`}
             >
               <Link href={navItem.pathLink} className="flex items-center">
                 {navItem.name.TH}
@@ -48,7 +48,7 @@ export default function TheNavbar() {
                   as="li"
                   variant="small"
                   color="blue"
-                  className={`p-1 text-lg font-medium font-font01 text-black hover:text-blue-400 ${router.pathname === navItem.pathLink ? "text-blue-400" : ""}`}
+                  className={`p-1 text-lg font-medium font-font01 text-black hover:text-blue-400 ${router.pathname === navItem.pathLink ? "active:text-blue-400" : ""}`}
                 >
                   <Link href={navItem.pathLink} className="flex items-center">
                     {navItem.name.TH}
@@ -59,7 +59,7 @@ export default function TheNavbar() {
                 {navItem.headMenu.map((subItem, subIndex) => (
                   <li key={subIndex}
                     role="menuitem"
-                    className={`block w-full cursor-pointer font-font01 font-medium select-none rounded-md px-3 pt-[9px] py-2 text-center transition-all hover:border-none hover:bg-blue-400 hover:text-white focus-visible:outline-none focus:border-none focus:bg-blue-400 focus:text-white active:border-none active:bg-blue-400 active:text-white ${router.pathname === subItem.pathLink ? "text-white bg-blue-400" : ""}`}
+                    className={`block w-full cursor-pointer font-font01 font-medium select-none rounded-md px-3 pt-[9px] py-2 text-center transition-all hover:border-none hover:bg-blue-400 hover:text-white focus-visible:outline-none focus:border-none focus:bg-blue-400 focus:text-white active:border-none active:bg-blue-400 active:text-white ${router.pathname === subItem.pathLink ? "active:text-white active:bg-blue-400" : ""}`}
                   >
                     <Link href={subItem.pathLink}>
                       {subItem.name.TH}
