@@ -6,13 +6,13 @@ import {
     Typography,
     Button
 } from "@material-tailwind/react";
-import Layout from "@/components/TheLayout";
 import Link from "next/link";
 import { NewsSlider } from "@/container/news-slids";
+import TheLayOut from "@/components/TheLayout";
 
 export default function BlogPage() {
     return (
-        <Layout>
+        <TheLayOut>
             <div className=""><NewsSlider/></div>
             <section className="container mx-auto font-font01 py-24">
             <div className="mt-12  ">
@@ -43,6 +43,6 @@ export default function BlogPage() {
                 </div>
             </div>
             </section>
-        </Layout>
+        </TheLayOut>
     )
 }
