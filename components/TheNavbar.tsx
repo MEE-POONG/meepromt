@@ -90,7 +90,7 @@ export default function TheNavbar() {
           </Typography>
           <div className="flex items-center gap-4 ">
             <div className="mr-4 hidden lg:block ">{navList}</div>
-            <BtnSetting />
+            {/* <BtnSetting /> */}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -134,7 +134,7 @@ export default function TheNavbar() {
         {/* Mobile Nav */}
         <Collapse open={openNav}>
           {navList}
-          <BtnSetting />
+          {/* <BtnSetting /> */}
         </Collapse>
       </Navbar>
     </>
