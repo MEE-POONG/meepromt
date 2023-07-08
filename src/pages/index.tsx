@@ -12,7 +12,7 @@ export default function Home() {
         />
         <title>Me Prompt Technology</title>
       </Head>
-      <div className="container text-cyan-800 mx-auto text-center mt-24 font-font01">
+      <div className="container text-blue-400 mx-auto text-center mt-24 font-font01">
         <div className="flex flex-col justify-center items-center text-center animate-fade-up">
           <img src="images/new-logo.png" className="w-72 " />
           <p className="max-w-sm font-bold text-xl mb-5">
