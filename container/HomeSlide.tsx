@@ -24,7 +24,7 @@ const HomeSlide: React.FC = () => {
                 { }
             </p>
             <h2 className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
-                {currentLanguage === "TH" ? "รับทำเว็บไซต์ และการตลาดออนไลน์" : "Get a website and online marketing"}
+                {currentLanguage === "TH" ? "รับทำเว็บไซต์ และการตลาดออนไลน์" : "Build Your Website and Optimize Your Digital Marketing."}
             </h2>
             <h5>
                 <BsFacebook className='inline mr-1' />meprompttecnology

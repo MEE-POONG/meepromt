@@ -11,12 +11,12 @@ const BtnSetting: FC = () => {
 
     return (
         <button
-            className="hidden lg:inline-block"
+            className=" flex "
             onClick={switchLanguage}
         >
             {currentLanguage}
-            <img className={currentLanguage === 'TH' ? 'sepia-0' : 'sepia'} width={45} src={'https://imagedelivery.net/QZ6TuL-3r02W7wQjQrv5DA/d6b61f6d-92fb-4830-0dfd-aa3ef41ed900/100'} />
-            <img className={currentLanguage === 'EN' ? 'sepia-0' : 'sepia'} width={45} src={'https://imagedelivery.net/QZ6TuL-3r02W7wQjQrv5DA/b284a787-d18d-42be-6c9d-bc01cfd5d300/100'} />
+            <img className={currentLanguage === 'TH' ? 'sepia-0' : 'sepia'} width={30} src={'https://imagedelivery.net/QZ6TuL-3r02W7wQjQrv5DA/d6b61f6d-92fb-4830-0dfd-aa3ef41ed900/100'} />
+            <img className={currentLanguage === 'EN' ? 'sepia-0' : 'sepia'} width={30} src={'https://imagedelivery.net/QZ6TuL-3r02W7wQjQrv5DA/b284a787-d18d-42be-6c9d-bc01cfd5d300/100'} />
         </button>
     );
 };
