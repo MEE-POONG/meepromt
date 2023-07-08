@@ -6,9 +6,8 @@ export default function Contact() {
     <Layout>
       <section className='container mx-auto font-font01 py-24'>
         <h2 className=' text-gray-600 mb-10 text-center font-semibold p-2'>ติดต่อเรา</h2>
-        <div className='h-1 rounded-full bg-black mb-16 bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500'></div>
 
-        <div className="px-10 ">
+        <div className="px-10 py-10">
           {/* Contact */}
           <div className='flex flex-col lg:flex-row justify-evenly'>
             <div className=' lg:w-4/12'>
@@ -74,7 +73,7 @@ export default function Contact() {
               </textarea>
 
               <div className="relative flex flex-col  justify-center  py-3 ">
-                <button className="text-sm bg-gradient-to-b mx-auto text-purple-500 font-semibold from-slate-50 to-purple-100 px-3 py-3 rounded-2xl shadow-purple-400 shadow-md border-b-4 hover  border-violet-200 hover:shadow-sm transition-all ">Send Message</button>
+                <button className="text-sm bg-gradient-to-b mx-auto text-purple-500 font-semibold from-slate-50 to-purple-100 px-3 py-3 rounded-2xl shadow-purple-400 shadow-md border-b-4 hover  border-purple-200 hover:shadow-sm transition-all ">Send Message</button>
               </div>
             </form>
           </div>
