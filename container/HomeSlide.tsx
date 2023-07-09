@@ -26,19 +26,20 @@ const HomeSlide: React.FC = () => {
 
             <ParallaxBanner
                 layers={[
-                    { image: '/images/news.jpg', speed: -20 },
+                    { image: '/images/h1.jpg', speed: -20 },
                 ]}
                 className="parallax aspect-[2/1]"
             >
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <img src="images/new-logo.png" className="w-72 " />
+                <div className="detail">
+                    <img src="images/new-logo.png" className="w-72 mx-auto " />
                     <h2 className='font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
                         {currentLanguage === "TH" ? "รับทำเว็บไซต์ และการตลาดออนไลน์" : "Build Your Website and Optimize Your Digital Marketing."}
                     </h2>
-                    <h5 className='w-100'>
-                        <BsFacebook className=' mr-1' />meprompttecnology
-                        <BsPhoneFill className=' mr-1 ml-2' />06-444-82650
-                        <BsFacebook className=' mr-1 ml-2' />meprompttecnology
+                    <h5>
+                        <BsFacebook className='inline-flex mr-5' />meprompttecnology
+                    </h5>
+                    <h5>
+                        <BsPhoneFill className='inline-flex  mr-5' />06-444-82650
                     </h5>
                 </div>
             </ParallaxBanner>

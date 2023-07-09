@@ -83,9 +83,9 @@ export default function TheNavbar() {
           <Typography
             as="a"
             href="#"
-            className="mr-4 cursor-pointer py-1.5 font-bold font-font01"
+            className="mr-4 cursor-pointer py-0 font-bold font-font01"
           >
-            <img src="./images/new-logo.png" className=" h-14 mx-auto" alt="" />
+            <img src="./images/new-logo.png" className=" h-8 mx-auto" alt="" />
             <span className="text-blue-400">Me Prompt Tecnology</span>
           </Typography>
           <div className="flex items-center gap-4 ">
