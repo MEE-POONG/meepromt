@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import TheLayout from '@/components/TheLayout'
+import HomeMain from '@/container/Home/HomeMain'
 export default function Home() {
   return (
     <TheLayout>
@@ -10,7 +11,8 @@ export default function Home() {
         />
         <title>Me Prompt Technology</title>
       </Head>
-      <div className="container text-blue-400 mx-auto text-center mt-24 font-font01">
+      <HomeMain />
+      {/* <div className="container text-blue-400 mx-auto text-center mt-24 font-font01">
         <div className="flex flex-col justify-center items-center text-center animate-fade-up">
           <img src="images/new-logo.png" className="w-72 " />
           <p className="max-w-sm font-bold text-xl mb-5">
@@ -22,9 +24,8 @@ export default function Home() {
           <h5>
           </h5>
         </div>
-        {/* <GuildIndex /> */}
 
-      </div>
+      </div> */}
     </TheLayout>
   )
 }

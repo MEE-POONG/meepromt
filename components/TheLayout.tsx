@@ -16,7 +16,7 @@ const TheLayOut: React.FC<LayoutProps> = ({ children }) => {
     <>
       <TheNavbar />
       {/* <TheNavbarThree /> */}
-      {/* <main className={inter.className}>{children}</main> */}
+      <main className={inter.className}>{children}</main>
       {/* <TheFooter /> */}
     </>
   );
