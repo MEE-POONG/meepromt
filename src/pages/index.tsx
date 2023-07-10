@@ -11,7 +11,9 @@ export default function Home() {
         />
         <title>Me Prompt Technology</title>
       </Head>
-      <HomeMain />
+      <div className='home-page'>
+        <HomeMain />
+      </div>
       {/* <div className="container text-blue-400 mx-auto text-center mt-24 font-font01">
         <div className="flex flex-col justify-center items-center text-center animate-fade-up">
           <img src="images/new-logo.png" className="w-72 " />

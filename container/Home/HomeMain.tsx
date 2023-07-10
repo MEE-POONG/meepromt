@@ -3,7 +3,7 @@ import React from 'react';
 const HomeMain: React.FC = () => {
     return (
 
-        <div className="main-banner h-100">
+        <div className="main-banner">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 align-self-center">
