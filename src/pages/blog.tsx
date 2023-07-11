@@ -22,7 +22,7 @@ export default function BlogPage() {
                                 <img className="" src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="img-blur-shadow" />
                             </CardHeader>
                             <CardBody className="py-2 px-2 font-font01">
-                                <Typography variant="h5" color="blue-gray" className="mb-2">
+                                <Typography variant="h5" color="purple" className="mb-2">
                                     UI/UX Review Check
                                 </Typography>
                                 <Typography className="font-font01 truncate ">
@@ -33,7 +33,7 @@ export default function BlogPage() {
                             </CardBody>
                             <CardFooter className="p-1 text-right">
                                 <Link href="/blogDetail">
-                                    <Button className=" bg-black rounded-full hover:bg-sky-500 text-sm font-font01 p-3">อ่านเพิ่ม</Button>
+                                    <Button className=" bg-purple-400 rounded-full hover:bg-sky-500 text-sm font-font01 p-3">อ่านเพิ่ม</Button>
                                 </Link>
                             </CardFooter>
                         </Card>

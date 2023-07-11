@@ -14,11 +14,11 @@ export default function NewsPage() {
                         <div className="shadow-md rounded-md overflow-hidden ">
                             <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                             <div className="p-7">
-                                <Link href="newsDetail" className="lg:text-2xl text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                                <Link href="newsDetail" className="lg:text-2xl text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                                 <p className="indent-8 mt-4 line-clamp-3 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                                 <div className="flex justify-between mt-5 items-center ">
-                                    <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                    <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                    <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                    <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                         <Link href="newsDetail" className="flex items-center">
                                             Read <BiArrowFromLeft size={20} />
                                         </Link>
@@ -33,11 +33,11 @@ export default function NewsPage() {
                                 <div className="shadow-md rounded-md overflow-hidden">
                                     <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                                     <div className="p-4">
-                                        <Link href="newsDetail" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                                        <Link href="newsDetail" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                                         <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                                         <div className="flex justify-between mt-5 items-center ">
-                                            <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                            <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                            <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                            <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                                 <Link href="newsDetail" className="flex items-center">
                                                     Read <BiArrowFromLeft size={20} />
                                                 </Link>
@@ -50,11 +50,11 @@ export default function NewsPage() {
                                 <div className="shadow-md rounded-md overflow-hidden">
                                     <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                                     <div className="p-4">
-                                        <Link href="" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                                        <Link href="" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                                         <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                                         <div className="flex justify-between mt-5 items-center ">
                                             <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                            <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                            <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                                 <Link href="" className="flex items-center">
                                                     Read <BiArrowFromLeft size={20} />
                                                 </Link>
@@ -71,11 +71,11 @@ export default function NewsPage() {
                                 <div className="shadow-md rounded-md overflow-hidden">
                                     <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                                     <div className="p-4">
-                                        <Link href="" className="lg:text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                                        <Link href="" className="lg:text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                                         <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                                         <div className="flex justify-between mt-5 items-center ">
-                                            <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                            <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                            <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                            <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                                 <Link href="" className="flex items-center">
                                                     Read <BiArrowFromLeft size={20} />
                                                 </Link>
@@ -88,11 +88,11 @@ export default function NewsPage() {
                                 <div className="shadow-md rounded-md overflow-hidden">
                                     <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                                     <div className="p-4">
-                                        <Link href="" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                                        <Link href="" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                                         <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                                         <div className="flex justify-between mt-5 items-center ">
-                                            <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                            <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                            <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                            <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                                 <Link href="" className="flex items-center">
                                                     Read <BiArrowFromLeft size={20} />
                                                 </Link>
@@ -109,11 +109,11 @@ export default function NewsPage() {
                     <div className="shadow-md rounded-md overflow-hidden">
                         <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                         <div className="p-4">
-                            <Link href="" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                            <Link href="" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                             <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                             <div className="flex justify-between mt-5 items-center ">
-                                <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                     <Link href="" className="flex items-center">
                                         Read <BiArrowFromLeft size={20} />
                                     </Link>
@@ -125,11 +125,11 @@ export default function NewsPage() {
                     <div className="shadow-md rounded-md overflow-hidden">
                         <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                         <div className="p-4">
-                            <Link href="" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                            <Link href="" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                             <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                             <div className="flex justify-between mt-5 items-center ">
-                                <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                     <Link href="" className="flex items-center">
                                         Read <BiArrowFromLeft size={20} />
                                     </Link>
@@ -141,11 +141,11 @@ export default function NewsPage() {
                     <div className="shadow-md rounded-md overflow-hidden">
                         <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                         <div className="p-4">
-                            <Link href="" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                            <Link href="" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                             <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                             <div className="flex justify-between mt-5 items-center ">
-                                <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                     <Link href="" className="flex items-center">
                                         Read <BiArrowFromLeft size={20} />
                                     </Link>
@@ -157,11 +157,11 @@ export default function NewsPage() {
                     <div className="shadow-md rounded-md overflow-hidden">
                         <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                         <div className="p-4">
-                            <Link href="" className="text-md text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                            <Link href="" className="text-md text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                             <p className="indent-8 mt-4 line-clamp-2 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                             <div className="flex justify-between mt-5 items-center ">
-                                <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>
-                                <button className="text-sm bg-blue-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
+                                <p className=" text-sm text-blue-400"> 24 พ.ค. 2566</p>
+                                <button className="text-sm bg-purple-400 text-white p-2 rounded-full hover:scale-105 shadow-md">
                                     <Link href="" className="flex items-center">
                                         Read <BiArrowFromLeft size={20} />
                                     </Link>
@@ -175,7 +175,7 @@ export default function NewsPage() {
                     <div className="shadow-md rounded-md overflow-hidden">
                         <img src="https://innotechtoday.com/wp-content/uploads/2023/05/brooke-cagle-g1Kr4Ozfoac-unsplash-1.jpg" alt="" />
                         <div className="p-7">
-                            <Link href="" className="text-2xl text-blue-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
+                            <Link href="" className="text-2xl text-purple-400 font-semibold hover:underline">Tech News to Know This Week: May 23 – 29</Link>
                             <p className="indent-8 mt-4 line-clamp-3 text-sm text-gray-800">Every day we wake up, drink some coffee, get ready for work and check on the latest tech. So here’s a handful of news stories from around the tech world condensed to fit into that first cup. These are things you need to know before you step foot out of your door (or in front of a webcam) and into the real world this morning.</p>
                             <div className="flex justify-between mt-8 items-center ">
                                 <p className=" text-sm text-purple-400"> 24 พ.ค. 2566</p>

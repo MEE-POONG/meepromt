@@ -3,6 +3,7 @@ export const navData = [
     {
         name: { EN: "News", TH: "ข่าวสาร" }, pathLink: "/news", headMenu: [
             { name: { EN: "Activity", TH: "กิจกรรมองค์กร" }, pathLink: "/activity", headLink: '/news' },
+            { name: { EN: "Blogs", TH: "บทความ" }, pathLink: "/blog", headLink: '/news' },
         ]
     },
     {

@@ -61,8 +61,8 @@ export default function Personals() {
           <h2 className='text-3xl text-violet-800 font-bold mb-8 text-center'>Team Co-op</h2>
             <div className="flex flex-col md:flex-row justify-center items-center">
               {/* card start */}
-              <a href="about" className="relative overflow-hidden w-64 h-80 rounded-xl shadow-cyan-400/50 shadow-lg hover:scale-95 mb-5">
-                <img className=" absolute w-full h-full object-cover" src="images/est.jpg" alt="" />
+              <a href="" className="relative overflow-hidden w-64 h-80 rounded-xl shadow-cyan-400/50 shadow-lg hover:scale-95 mb-5">
+                <img className=" absolute w-full h-full object-cover" src="images/employee/coop/g101.jpg" alt="" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/10"></div>
                 <div className="absolute top-60 left-5">
                   <h3 className="text-xl font-bold text-white ">Apprentice</h3>
