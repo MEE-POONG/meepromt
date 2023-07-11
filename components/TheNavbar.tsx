@@ -4,16 +4,6 @@ const TheNavber: React.FC = () => {
   return (
 
     <>
-      {/* <div id="js-preloader" className="js-preloader">
-        <div className="preloader-inner">
-          <span className="dot"></span>
-          <div className="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div> */}
       <header className="header-area header-sticky">
         <div className="container">
           <div className="row">

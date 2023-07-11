@@ -24,10 +24,10 @@ const HomeMain: React.FC = () => {
                     <div className="col-lg-5 offset-lg-1">
                         <div className="owl-banner owl-carousel">
                             <div className="item">
-                                <img src="assets/images/banner-01.png" alt="" />
+                                <img src="/images//banner-01.png" alt="" />
                             </div>
                             <div className="item">
-                                <img src="assets/images/banner-02.png" alt="" />
+                                <img src="/images//banner-02.png" alt="" />
                             </div>
                         </div>
                     </div>
